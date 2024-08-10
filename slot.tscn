@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyavokaqgdpdc"]
+
+[ext_resource type="Script" path="res://slot.gd" id="1_yuouc"]
+
+[node name="Slot" type="ColorRect"]
+offset_right = 36.0
+offset_bottom = 36.0
+color = Color(0.188371, 0.188371, 0.188371, 1)
+script = ExtResource("1_yuouc")
+
+[node name="Filter" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="gui_input" from="Filter" to="." method="_on_filter_gui_input"]
